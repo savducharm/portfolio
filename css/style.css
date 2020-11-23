@@ -86,7 +86,6 @@ a:visited {
   color: #D9D9D9;
 }
 */
-
 a:hover,
 a:focus {
   color: rgba(198, 161, 160, 1);
@@ -127,17 +126,17 @@ a:active {
 }
 
 .button-contact {
-	display: inline-block;
+  display: inline-block;
   background-color: transparent;
   color: #7A8B7B;
-	padding: 10px;
+  padding: 10px;
   border: 2px solid #7A8B7B;
 }
 
 .button-contact:hover {
   background-color: #7A8B7B;
   color: #ffffff;
-	text-decoration: none;
+  text-decoration: none;
 }
 
 .button-contact:active {
