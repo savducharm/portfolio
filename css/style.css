@@ -1,0 +1,146 @@
+/* Color Theme Swatches in Hex
+light-green-hex { color: #7A8B7B; }
+medium-green-hex { color: #214002; }
+dark green-hex { color: #182A0F; }
+pale-yellow-hex { color: #CBB16F; }
+pink-hex { color: #C6A1A0; }
+
+Color Theme Swatches in RGBA
+light-green-rgba { color: rgba(122, 139, 123, 1); }
+medium-green-rgba { color: rgba(33, 64, 2, 1); }
+dark green-rgba { color: rgba(24, 42, 15, 1); }
+pale-yellow-rgba { color: rgba(203, 177, 111, 1); }
+pink-rgba { color: rgba(198, 161, 160, 1); }
+*/
+/* Color Theme Neutral Swatches in Hex
+light grey { color: #F2F2F2; }
+light-med grey { color: #D9D9D9; }
+medium grey { color: #737373; }
+dark grey { color: #262626; }
+almost black { color: #0D0D0D; }
+
+Color Theme Neutral Swatches in RGBA
+light grey { color: rgba(242, 242, 242, 1); }
+light-med grey { color: rgba(217, 217, 217, 1); }
+medium grey { color: rgba(115, 115, 115, 1); }
+dark grey { color: rgba(38, 38, 38, 1); }
+almost black { color: rgba(13, 13, 13, 1); }
+ */
+/* Body */
+body {
+  background-color: #ffffff;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 16px;
+  /* Sets the font size to 16px */
+  font-weight: 400;
+  /* Sets the font weight to 300 */
+  line-height: 1.6;
+  /* Sets the line-height to 1.6 * the font-size */
+  color: ##262626;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Lora', serif;
+  line-height: 1.4;
+}
+
+h1 {
+  font-size: 2.75em;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 2em;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.5em;
+  font-weight: 500;
+}
+
+h4 {
+  font-size: 1.35em;
+  font-weight: 400;
+}
+
+h5 {
+  font-size: 1em;
+  font-weight: 600;
+}
+
+/* Image View Port */
+img {
+  width: 100%;
+}
+
+/* Links */
+a {
+  color: rgba(122, 139, 123, 1);
+  text-decoration: none;
+  /* No underlining */
+}
+
+/* For visited link: I don't think I want to add this feature but I'm leaving the code here in case I change my mind
+a:visited {
+  color: #D9D9D9;
+}
+*/
+
+a:hover,
+a:focus {
+  color: rgba(198, 161, 160, 1);
+  text-decoration: underline;
+  /* Underlining when hovering over a link */
+}
+
+a:active {
+  /* selected link */
+  color: #994c30;
+}
+
+.button {
+  display: inline-block;
+  /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
+  background-color: #7A8B7B;
+  color: #ffffff;
+  /* needed to override the default link color */
+  font-weight: 500;
+  padding: 10px;
+  border-radius: 2px;
+  border-bottom: 1px solid #7A8B7B;
+  /* width of the border, type, color */
+  transition: 0.2s opacity;
+}
+
+.button:hover {
+  opacity: 0.8;
+  /* Reduces the opacity of the button to 80% */
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.button:active {
+  opacity: 0.8;
+  /* Reduces the opacity of the button to 80% */
+  text-decoration: none;
+}
+
+.button-contact {
+	display: inline-block;
+  background-color: transparent;
+  color: #7A8B7B;
+	padding: 10px;
+  border: 2px solid #7A8B7B;
+}
+
+.button-contact:hover {
+  background-color: #7A8B7B;
+  color: #ffffff;
+	text-decoration: none;
+}
+
+.button-contact:active {
+  background-color: #7A8B7B;
+  color: #ffffff;
+}
