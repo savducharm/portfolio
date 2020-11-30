@@ -168,6 +168,7 @@ a:active {
 .logo {
   max-width: 140px;
   fill: black;
+  transition: fill 1s ease;
 }
 
 .logo:hover {
