@@ -722,3 +722,12 @@ X-large devices (1440px or larger)
 .cloud-back {
   animation: 34s cloud-move-reverse infinite alternate linear;
 }
+
+@keyframes color-change-logo {
+  from {fill: black;}
+  to {fill: #7A8B7B;}
+}
+
+.logo {
+  animation: 2s color-change-logo infinite alternate linear;
+}
