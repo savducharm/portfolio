@@ -643,15 +643,25 @@ Large devices (1024px or larger)
 
 
  .final-image {
-   width:70%;
+   width:60%;
    margin-left: auto;
    margin-right: auto;
  }
 
+ .conclusion {
+   text-align: center;
+   padding-right: 240px;
+   padding-left: 240px;
+ }
+
  .feature-list {
    width: 100%;
-   padding: 20px 200px;
-   margin: 40px auto;
+   padding: 20px 20px;
+   margin-top: 155px;
+ }
+
+ .feature {
+   margin-top: 80px;
  }
 
 
@@ -662,7 +672,7 @@ Large devices (1024px or larger)
  }
 
  #project-body h3 {
-   margin-top: 60px;
+   margin-top: 70px;
  }
 
  #project-body {
@@ -673,6 +683,27 @@ Large devices (1024px or larger)
    margin-top: 40px;
    width: 100%;
    height: 300px;
+ }
+
+ .new-section p {
+   padding-right: 500px;
+ }
+
+ .project-subsection p {
+   padding-right: 500px;
+   margin-bottom: 60px;
+ }
+
+ .negative-margin {
+   margin-top: -300px;
+ }
+
+.right-lg-padding {
+ padding-right: 450px;
+}
+
+ .top-margin {
+   margin-top: 80px;
  }
 
  .col-lg-7 {
