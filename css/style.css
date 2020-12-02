@@ -168,7 +168,7 @@ a:active {
 .logo {
   max-width: 140px;
   fill: black;
-  transition: fill 1s ease;
+  transition: fill 0.4s ease;
 }
 
 .logo:hover {
@@ -321,13 +321,12 @@ footer ul li a {
 .social-icon {
   max-width: 40%;
   fill: white;
+  transition: fill 0.4s ease;
 }
 
 .social-icon:hover {
   max-width: 40%;
   fill: #C6A1A0;
-  transition-duration: 0.3s;
-  transition-property: fill;
 }
 
 .copyright {
@@ -717,6 +716,12 @@ Large devices (1024px or larger)
  .col-lg-6 {
    width: 50%;
  }
+
+ .animation {
+   width: 50%;
+   margin-left: auto;
+   margin-right: auto;
+ }
 }
 
 /* ==============================
@@ -753,13 +758,4 @@ X-large devices (1440px or larger)
 
 .cloud-back {
   animation: 34s cloud-move-reverse infinite alternate linear;
-}
-
-@keyframes color-change-logo {
-  from {fill: black;}
-  to {fill: #7A8B7B;}
-}
-
-.logo {
-  animation: 2s color-change-logo infinite alternate linear;
 }
