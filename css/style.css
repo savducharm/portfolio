@@ -164,7 +164,6 @@ a:active {
   border-bottom: 1px solid #4a4a4a;
 }
 
-
 .logo {
   max-width: 140px;
   fill: black;
@@ -206,8 +205,7 @@ a:active {
 
 header {
   background-color: #ffffff;
-  text-align: center;
-  padding: 10px 0;
+  padding: 10px 0 4px;
   box-shadow: 0px 3px 11px 0px rgba(50, 50, 50, 0.55);
   position: fixed;
   width: 100%;
@@ -217,10 +215,7 @@ header {
 nav>ul {
   list-style-type: none;
   padding: 0;
-}
-
-nav>ul>li {
-  display: inline-block;
+  margin: 0;
 }
 
 nav>ul>li>a {
@@ -234,9 +229,39 @@ nav>ul>li>a:hover {
   text-decoration: none;
 }
 
-nav {
+.navtoggle li:not(:last-child) {
+  display: none;
+}
+
+.navtoggle, .navtoggle.responsive {
+  position: relative;
+}
+
+.navtoggle.responsive li {
   display: block;
-  width: 100%;
+}
+
+.navtoggle.responsive nav {
+  padding: 24px 0 0;
+}
+
+.navtoggle.responsive li {
+  display: block;
+  padding: 10px 0;
+  border-top: 1px solid rgba(255, 127, 80, 0.5);
+}
+
+.navtoggle.responsive li:last-child {
+  padding: 0 0 10px;
+}
+
+.navtoggle li .icon {
+  position: absolute;
+  right: 0;
+  top: 2px;
+  font-size: 20px;
+  padding-right: 0px;
+  margin-top: 10px;
 }
 
 #hero {
@@ -254,7 +279,7 @@ nav {
 }
 
 main {
-  padding-top: 131px;
+  padding-top: 67px;
 }
 
 footer {
@@ -523,7 +548,6 @@ footer ul li a {
 }
 
 /*Advanced CSS for Designers */
-
 .button {
   display: inline-block;
   background-color: #7A8B7B;
@@ -541,7 +565,6 @@ footer ul li a {
   transition-property: background-color, color, border;
 }
 
-
 /* ==============================
 Medium devices (640px and larger)
 ================================= */
@@ -552,13 +575,27 @@ Medium devices (640px and larger)
   }
 
   nav {
-    width: 350px;
+    width: 400px;
     float: right;
-    margin-top: 4px;
+    margin-top: 10px;
   }
 
+  nav>ul>li {
+    display: inline-block;
+  }
+
+  .navtoggle li:not(:last-child) {
+    display: inline-block;
+  }
+
+  /* ensures menu list items are displayed */
+  .navtoggle li:last-child {
+    display: none;
+  }
+
+  /* hides hamburger menu */
   main {
-    padding-top: 94px;
+    padding-top: 87px;
   }
 
   body {
@@ -600,14 +637,12 @@ Medium devices (640px and larger)
   #about h3 {
     margin-top: 40px;
   }
-
 }
 
 /* ==============================
 Large devices (1024px or larger)
 ================================= */
 @media only screen and (min-width: 1024px) {
-
   body {
     font-size: 18px;
   }
@@ -636,97 +671,101 @@ Large devices (1024px or larger)
     padding: 0px 100px;
   }
 
- #about p {
-   margin-top: 0px;
- }
+  #about p {
+    margin-top: 0px;
+  }
 
- .solo-image-2 {
-   width: 65%;
-   margin: 60px auto;
- }
+  .solo-image-2 {
+    width: 65%;
+    margin: 60px auto;
+  }
 
+  .final-image {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
- .final-image {
-   width:60%;
-   margin-left: auto;
-   margin-right: auto;
- }
+  .conclusion {
+    text-align: center;
+    padding-right: 240px;
+    padding-left: 240px;
+  }
 
- .conclusion {
-   text-align: center;
-   padding-right: 240px;
-   padding-left: 240px;
- }
+  .feature-list {
+    width: 100%;
+    padding: 20px 20px;
+    margin-top: 155px;
+  }
 
- .feature-list {
-   width: 100%;
-   padding: 20px 20px;
-   margin-top: 155px;
- }
+  .feature {
+    margin-top: 80px;
+  }
 
- .feature {
-   margin-top: 80px;
- }
+  #quickcare .project-hero {
+    width: 100%;
+    height: 624px;
+    background-color: #3845A7;
+  }
 
+  #project-body h3 {
+    margin-top: 70px;
+  }
 
- #quickcare .project-hero {
-   width: 100%;
-   height: 624px;
-   background-color: #3845A7;
- }
+  #project-body {
+    padding-top: 30px;
+  }
 
- #project-body h3 {
-   margin-top: 70px;
- }
+  .project-section ul li {
+    line-height: 1.6;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+  }
 
- #project-body {
-   padding-top: 30px;
- }
+  .new-section {
+    margin-top: 40px;
+    width: 100%;
+    height: 300px;
+  }
 
- .new-section {
-   margin-top: 40px;
-   width: 100%;
-   height: 300px;
- }
+  .new-section p {
+    padding-right: 500px;
+  }
 
- .new-section p {
-   padding-right: 500px;
- }
+  .project-subsection p {
+    padding-right: 500px;
+    margin-bottom: 60px;
+  }
 
- .project-subsection p {
-   padding-right: 500px;
-   margin-bottom: 60px;
- }
+  .negative-margin {
+    margin-top: -300px;
+  }
 
- .negative-margin {
-   margin-top: -300px;
- }
+  .right-lg-padding {
+    padding-right: 450px;
+  }
 
-.right-lg-padding {
- padding-right: 450px;
-}
+  .top-margin {
+    margin-top: 80px;
+  }
 
- .top-margin {
-   margin-top: 80px;
- }
+  .col-lg-7 {
+    width: 60%;
+  }
 
- .col-lg-7 {
-   width: 60%;
- }
+  .col-lg-5 {
+    width: 40%;
+  }
 
- .col-lg-5 {
-   width: 40%;
- }
+  .col-lg-6 {
+    width: 50%;
+  }
 
- .col-lg-6 {
-   width: 50%;
- }
-
- .animation {
-   width: 50%;
-   margin-left: auto;
-   margin-right: auto;
- }
+  .animation {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 /* ==============================
@@ -734,13 +773,19 @@ X-large devices (1440px or larger)
 ================================= */
 @media only screen and (min-width: 1440px) {}
 
-
 /* CSS Animation */
-
 @keyframes color-change {
-  0% {fill: #edc655;}
-  50% {fill: #fcffad;}
-  100% {fill: #f76414;}
+  0% {
+    fill: #edc655;
+  }
+
+  50% {
+    fill: #fcffad;
+  }
+
+  100% {
+    fill: #f76414;
+  }
 }
 
 .sun {
@@ -748,8 +793,13 @@ X-large devices (1440px or larger)
 }
 
 @keyframes cloud-move {
-  from {transform: translate(0,50px);}
-  to {transform: translate(200px,50px);}
+  from {
+    transform: translate(0, 50px);
+  }
+
+  to {
+    transform: translate(200px, 50px);
+  }
 }
 
 .cloud-front {
@@ -757,8 +807,13 @@ X-large devices (1440px or larger)
 }
 
 @keyframes cloud-move-reverse {
-  from {transform: translate(446px,48px);}
-  to {transform: translate(100px, 48px);}
+  from {
+    transform: translate(446px, 48px);
+  }
+
+  to {
+    transform: translate(100px, 48px);
+  }
 }
 
 .cloud-back {
