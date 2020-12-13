@@ -16,6 +16,7 @@
 <body id="dr.vocab">
   <header id="navigation-bar">
     <div class="container">
+      <div class="navtoggle" id="myNavtoggle">
       <a href="index.html">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80.67 26.62" class="logo">
           <path class="cls-1"
@@ -30,9 +31,11 @@
         <ul>
           <li><a href="index.html">Work</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#contact" onclick="menuToggle()">Contact</a></li>
+          <li><a href="javascript:void(0);" class="icon" onclick="menuToggle()"><i class="fas fa-bars"></i></a></li>
         </ul>
       </nav>
+    </div>
     </div>
   </header>
 
