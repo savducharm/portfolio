@@ -576,8 +576,8 @@ footer ul li a {
   padding: 37px 25px;
   display: inline-block;
   width: 100%;
-  background-color: #a26665;
-  color: #fff;
+  background-color: #f2f2f2;
+  color: #000;
   text-align: left;
 }
 
@@ -839,6 +839,10 @@ Large devices (1024px or larger)
   }
 
   .animation-width {
+    padding: 0;
+  }
+
+  .side-padding-t {
     padding: 0;
   }
 }
