@@ -1,17 +1,18 @@
 /* Color Theme Swatches in Hex
-light-green-hex { color: #7A8B7B; }
+light-green-hex { color: #7A8B7B; #6a7a6b; }
 medium-green-hex { color: #214002; }
 dark green-hex { color: #182A0F; }
 pale-yellow-hex { color: #CBB16F; }
-pink-hex { color: #C6A1A0; }
+pink-hex { color: #C6A1A0; #a26665 }
 
 Color Theme Swatches in RGBA
-light-green-rgba { color: rgba(122, 139, 123, 1); }
+light-green-rgba { color: rgba(122, 139, 123, 1); rgba(106, 122, 107); }
 medium-green-rgba { color: rgba(33, 64, 2, 1); }
 dark green-rgba { color: rgba(24, 42, 15, 1); }
 pale-yellow-rgba { color: rgba(203, 177, 111, 1); }
 pink-rgba { color: rgba(198, 161, 160, 1); }
 */
+
 /* Color Theme Neutral Swatches in Hex
 light grey { color: #F2F2F2; }
 light-med grey { color: #D9D9D9; }
@@ -26,25 +27,32 @@ medium grey { color: rgba(115, 115, 115, 1); }
 dark grey { color: rgba(38, 38, 38, 1); }
 almost black { color: rgba(13, 13, 13, 1); }
  */
-/*sets default width of all elements to include the padding and border */
+
+/* sets default width of all elements to include the padding and border */
 * {
   box-sizing: border-box;
 }
 
 /* Body */
 body {
-  background-color: #ffffff;
+  background-color: #fff;
   font-family: 'Nanum Gothic', sans-serif;
   font-size: 16px;
+
   /* Sets the font size to 16px */
   font-weight: 400;
+
   /* Sets the font weight to 400 */
   line-height: 1.6;
+
   /* Sets the line-height to 1.6 * the font-size */
   color: #262626;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: 'Lora', serif;
   line-height: 1.4;
 }
@@ -83,6 +91,7 @@ img {
 a {
   color: rgba(122, 139, 123, 1);
   text-decoration: none;
+
   /* No underlining */
 }
 
@@ -95,6 +104,7 @@ a:hover,
 a:focus {
   color: rgba(198, 161, 160, 1);
   text-decoration: underline;
+
   /* Underlining when hovering over a link */
 }
 
@@ -105,51 +115,61 @@ a:active {
 
 .button {
   display: inline-block;
+
   /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
-  background-color: #7A8B7B;
-  color: #ffffff;
+  background-color: #6a7a6b;
+  color: #fff;
+
   /* needed to override the default link color */
   font-weight: 500;
-  padding: 10px;
-  border-radius: 2px;
-  border-bottom: 1px solid #7A8B7B;
+  padding: 15px;
+  border-radius: 5px;
+  border-bottom: 1px solid #6a7a6b;
+
   /* width of the border, type, color */
   transition: 0.2s opacity;
-  border-radius: 5px;
-  margin: 10px 0;
+  margin: 10px;
 }
 
 .button:hover {
   opacity: 0.8;
+
   /* Reduces the opacity of the button to 80% */
   text-decoration: none;
-  color: #ffffff;
+  color: #fff;
 }
 
 .button:active {
   opacity: 0.8;
+
   /* Reduces the opacity of the button to 80% */
   text-decoration: none;
 }
 
+a.button {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
 .button-contact {
   display: inline-block;
   background-color: transparent;
-  color: #7A8B7B;
+  color: #6a7a6b;
   padding: 10px;
-  border: 2px solid #7A8B7B;
+  border: 2px solid #6a7a6b;
   border-radius: 5px;
 }
 
 .button-contact:hover {
-  background-color: #7A8B7B;
-  color: #ffffff;
+  background-color: #6a7a6b;
+  color: #fff;
   text-decoration: none;
 }
 
 .button-contact:active {
-  background-color: #7A8B7B;
-  color: #ffffff;
+  background-color: #6a7a6b;
+  color: #fff;
 }
 
 /* Layout styling */
@@ -158,8 +178,9 @@ a:active {
 }
 
 #my-work .row {
-  margin: 0 0 25px 0;
+  margin: 0 0 25px;
   padding: 30px 0;
+
   /* 25px top and bottom, 0 left and right */
   border-bottom: 1px solid #4a4a4a;
 }
@@ -172,7 +193,7 @@ a:active {
 
 .logo:hover {
   max-width: 140px;
-  fill: #C6A1A0;
+  fill: #c6a1a0;
 }
 
 #my-work h2 {
@@ -181,8 +202,8 @@ a:active {
 
 #my-work h5 {
   display: block;
-  color: #182A0F;
-  margin: 3px 0px 12px 0px;
+  color: #182a0f;
+  margin: 3px 0 12px;
 }
 
 #my-work h3 {
@@ -204,28 +225,28 @@ a:active {
 }
 
 header {
-  background-color: #ffffff;
+  background-color: #fff;
   padding: 10px 0 4px;
-  box-shadow: 0px 3px 11px 0px rgba(50, 50, 50, 0.55);
+  box-shadow: 0 3px 11px 0 rgba(50, 50, 50, 0.55);
   position: fixed;
   width: 100%;
   z-index: 10;
 }
 
-nav>ul {
+nav > ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
-nav>ul>li>a {
+nav > ul > li > a {
   padding: 0 25px;
   text-transform: lowercase;
   font-weight: 700;
   color: rgba(122, 139, 123, 1);
 }
 
-nav>ul>li>a:hover {
+nav > ul > li > a:hover {
   text-decoration: none;
 }
 
@@ -233,7 +254,8 @@ nav>ul>li>a:hover {
   display: none;
 }
 
-.navtoggle, .navtoggle.responsive {
+.navtoggle,
+.navtoggle.responsive {
   position: relative;
 }
 
@@ -261,16 +283,16 @@ nav>ul>li>a:hover {
   right: 0;
   top: 2px;
   font-size: 20px;
-  padding-right: 0px;
+  padding-right: 0;
   margin-top: 10px;
 }
 
 #hero {
-  padding: 37px 0px;
+  padding: 37px 0;
   display: inline-block;
   width: 100%;
-  background-color: #182A0F;
-  color: #ffffff;
+  background-color: #182a0f;
+  color: #fff;
   text-align: center;
   min-height: 400px;
 }
@@ -284,14 +306,13 @@ main {
 }
 
 footer {
-  background-color: #182A0F;
+  background-color: #182a0f;
   margin-top: 50px;
-  color: #ffffff;
+  color: #fff;
   text-align: center;
   padding: 10px 0;
-  text-align: center;
   display: inline-block;
-  box-shadow: 0px 3px 11px 0px rgba(50, 50, 50, 0.55);
+  box-shadow: 0 3px 11px 0 rgba(50, 50, 50, 0.55);
   width: 100%;
 }
 
@@ -301,29 +322,29 @@ footer h2 {
 }
 
 footer p {
-  margin: 0 25px 30px 25px;
+  margin: 0 25px 30px;
 }
 
 footer .button-contact {
   display: inline-block;
   background-color: transparent;
-  color: #ffffff;
+  color: #fff;
   padding: 10px;
-  border: 2px solid #ffffff;
+  border: 2px solid #fff;
   margin-bottom: 30px;
 }
 
 footer .button-contact:hover {
-  background-color: #C6A1A0;
-  color: #182A0F;
+  background-color: #c6a1a0;
+  color: #182a0f;
   text-decoration: none;
-  border: 2px solid #C6A1A0;
+  border: 2px solid #c6a1a0;
 }
 
 footer .button-contact:active {
-  background-color: #C6A1A0;
-  color: #182A0F;
-  border: 2px solid #C6A1A0;
+  background-color: #c6a1a0;
+  color: #182a0f;
+  border: 2px solid #c6a1a0;
 }
 
 footer ul {
@@ -338,7 +359,7 @@ footer ul li {
 
 footer ul li a {
   display: inline-block;
-  padding: 0 0px;
+  padding: 0;
   text-transform: lowercase;
   font-weight: 700;
   color: rgba(122, 139, 123, 1);
@@ -352,11 +373,17 @@ footer ul li a {
 
 .social-icon:hover {
   max-width: 40%;
-  fill: #C6A1A0;
+  fill: #c6a1a0;
 }
 
 .copyright {
   font-size: 0.75em;
+}
+
+.animation {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* About Page */
@@ -373,39 +400,39 @@ footer ul li a {
 }
 
 #about a {
-  margin: 25px 0px;
+  margin: 25px 0;
 }
 
 #about h3 {
   font-size: 1.2em;
-  font-weight: 600px;
+  font-weight: 600;
 }
 
 /* QuickCare */
 #project-title h1 {
   font-size: 3em;
   font-weight: 700;
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
 #project-body p {
-  margin: 0px;
+  margin: 0;
   margin-bottom: 30px;
-  font-size: .95em;
+  font-size: 0.95em;
 }
 
 #project-title p {
-  color: #182A0F;
+  color: #182a0f;
   font-size: 1.1em;
   font-weight: 700;
-  margin: 7px 0px;
+  margin: 7px 0;
 }
 
 .project-section {
-  background: #F2F2F2;
+  background: #f2f2f2;
   border-radius: 10px;
   padding: 20px 25px;
-  margin: 50px 0px;
+  margin: 50px 0;
 }
 
 .project-section ul {
@@ -414,13 +441,13 @@ footer ul li a {
 }
 
 .project-section ul li {
-  line-height: 1.3;
+  line-height: 1.6;
   margin-bottom: 5px;
-  font-size: 0.9em;
+  font-size: 0.95em;
 }
 
 .image .project-section img {
-  margin: 15px 0px;
+  margin: 15px 0;
 }
 
 .wireframe img {
@@ -433,7 +460,7 @@ footer ul li a {
 
 .solo-image img {
   display: block;
-  margin: 20px 0px;
+  margin: 20px 0;
   margin-left: auto;
   margin-right: auto;
   width: 90%;
@@ -441,7 +468,7 @@ footer ul li a {
 
 .solo-image-2 img {
   display: block;
-  margin: 20px 0px;
+  margin: 20px 0;
   margin-left: auto;
   margin-right: auto;
   width: 90%;
@@ -449,7 +476,7 @@ footer ul li a {
 
 .final-image img {
   display: block;
-  margin: 100px 0px 50px 0px;
+  margin: 100px 0 50px;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
@@ -471,7 +498,7 @@ footer ul li a {
 }
 
 #project-body h6 {
-  margin: 10px 0px;
+  margin: 10px 0;
 }
 
 #project-body ol {
@@ -493,7 +520,7 @@ footer ul li a {
 }
 
 .feature {
-  margin: 60px 0px;
+  margin: 60px 0;
 }
 
 .feature ol {
@@ -510,12 +537,12 @@ footer ul li a {
 .feature-list {
   display: inline-block;
   width: 100%;
-  background-color: rgba(122, 139, 123, 0.65);
-  color: #ffffff;
+  background-color: rgb(106, 122, 107, 0.65);
+  color: #fff;
   text-align: left;
   border-radius: 10px;
-  padding: 10px 20px 10px 20px;
-  margin: 20px 0px;
+  padding: 10px 20px;
+  margin: 20px 0;
 }
 
 .bold-paragraph p {
@@ -526,38 +553,39 @@ footer ul li a {
   padding: 37px 25px;
   display: inline-block;
   width: 100%;
-  background-color: #182A0F;
-  color: #ffffff;
+  background-color: #182a0f;
+  color: #fff;
   text-align: left;
 }
 
 .new-section h6 {
   font-family: 'Nanum Gothic', sans-serif;
   text-transform: uppercase;
-  color: #CBB16F;
-  margin: 0px;
-  font-weight: 800px;
+  color: #cbb16f;
+  margin: 0;
+  font-weight: 800;
 }
 
 .conclusion {
   padding: 37px 25px;
   display: inline-block;
   width: 100%;
-  background-color: #C6A1A0;
-  color: #ffffff;
+  background-color: #a26665;
+  color: #fff;
   text-align: left;
 }
 
-/*Advanced CSS for Designers */
+/* Advanced CSS for Designers */
 .button {
   display: inline-block;
-  background-color: #7A8B7B;
+  background-color: #6a7a6b;
   color: white;
   font-weight: 500;
   text-decoration: none;
   padding: 10px;
+  margin: 10px auto;
   border-radius: 2px;
-  border-bottom: 1px solid #7A8B7B;
+  border-bottom: 1px solid #6a7a6b;
   transition: 0.2s opacity;
 }
 
@@ -581,7 +609,7 @@ Medium devices (640px and larger)
     margin-top: 10px;
   }
 
-  nav>ul>li {
+  nav > ul > li {
     display: inline-block;
   }
 
@@ -609,7 +637,7 @@ Medium devices (640px and larger)
   }
 
   #hero p {
-    padding: 0px 20px;
+    padding: 0 20px;
   }
 
   .col-md-6 {
@@ -622,7 +650,7 @@ Medium devices (640px and larger)
 
   [class*="col-"] {
     float: left;
-    padding: 0px 10px;
+    padding: 0 10px;
   }
 
   .row::after {
@@ -632,11 +660,35 @@ Medium devices (640px and larger)
   }
 
   h3 {
-    margin-top: 0px;
+    margin-top: 0;
   }
 
   #about h3 {
     margin-top: 40px;
+  }
+
+  #about {
+    padding-top: 110px;
+  }
+
+  .side-padding-t {
+    padding: 0 200px;
+  }
+
+  .top-margin-2 {
+    margin-top: 150px;
+  }
+
+  .animation {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .about-image {
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -646,6 +698,18 @@ Large devices (1024px or larger)
 @media only screen and (min-width: 1024px) {
   body {
     font-size: 18px;
+  }
+
+  #about {
+    padding-top: 130px;
+  }
+
+  #skills-and-tools {
+    padding-top: 30px;
+  }
+
+  #skills-and-tools h3 {
+    font-size: 1.2em;
   }
 
   #my-work .container {
@@ -669,11 +733,11 @@ Large devices (1024px or larger)
   }
 
   #hero p {
-    padding: 0px 100px;
+    padding: 0 100px;
   }
 
   #about p {
-    margin-top: 0px;
+    margin-top: 0;
   }
 
   .solo-image-2 {
@@ -695,7 +759,7 @@ Large devices (1024px or larger)
 
   .feature-list {
     width: 100%;
-    padding: 20px 20px;
+    padding: 20px;
     margin-top: 155px;
   }
 
@@ -706,7 +770,7 @@ Large devices (1024px or larger)
   #quickcare .project-hero {
     width: 100%;
     height: 624px;
-    background-color: #3845A7;
+    background-color: #3845a7;
   }
 
   #project-body h3 {
@@ -767,12 +831,17 @@ Large devices (1024px or larger)
     margin-left: auto;
     margin-right: auto;
   }
+
+  .animation-width {
+    padding: 0;
+  }
 }
 
 /* ==============================
 X-large devices (1440px or larger)
 ================================= */
-@media only screen and (min-width: 1440px) {}
+
+/* @media only screen and (min-width: 1440px) {} */
 
 /* CSS Animation */
 @keyframes color-change {
