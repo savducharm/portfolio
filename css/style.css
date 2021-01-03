@@ -581,6 +581,10 @@ footer ul li a {
   text-align: left;
 }
 
+.center-button {
+  text-align: center;
+}
+
 /* Advanced CSS for Designers */
 .button {
   display: inline-block;
@@ -705,6 +709,10 @@ Medium devices (640px and larger)
     margin-left: auto;
     margin-right: auto;
   }
+
+  .center {
+    text-align: center;
+  }
 }
 
 /* ==============================
@@ -753,6 +761,10 @@ Large devices (1024px or larger)
 
   #about p {
     margin-top: 0;
+  }
+
+  .center-button {
+    text-align: left;
   }
 
   .solo-image-2 {
@@ -853,6 +865,14 @@ Large devices (1024px or larger)
 
   .side-padding-t {
     padding: 0;
+  }
+
+  .about-image {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 7px;
+    padding-right: 10px;
   }
 }
 
