@@ -628,6 +628,15 @@ Medium devices (640px and larger)
     display: none;
   }
 
+  .navtoggle.responsive nav {
+    padding: 0;
+  }
+
+  .navtoggle.responsive li {
+    padding: 0;
+    border-top: none;
+  }
+
   /* hides hamburger menu */
   main {
     padding-top: 87px;
