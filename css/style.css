@@ -178,6 +178,7 @@ a.button {
 /* Layout styling */
 .container {
   padding: 0 15px;
+  overflow-x: hidden;
 }
 
 #my-work .row {
