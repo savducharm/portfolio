@@ -12,7 +12,6 @@ dark green-rgba { color: rgba(24, 42, 15, 1); }
 pale-yellow-rgba { color: rgba(203, 177, 111, 1); }
 pink-rgba { color: rgba(198, 161, 160, 1); }
 */
-
 /* Color Theme Neutral Swatches in Hex
 light grey { color: #F2F2F2; }
 light-med grey { color: #D9D9D9; }
@@ -27,10 +26,13 @@ medium grey { color: rgba(115, 115, 115, 1); }
 dark grey { color: rgba(38, 38, 38, 1); }
 almost black { color: rgba(13, 13, 13, 1); }
  */
-
 /* sets default width of all elements to include the padding and border */
 * {
   box-sizing: border-box;
+}
+
+.none {
+  display: none;
 }
 
 /* Body */
@@ -38,13 +40,10 @@ body {
   background-color: #fff;
   font-family: 'Nanum Gothic', sans-serif;
   font-size: 16px;
-
   /* Sets the font size to 16px */
   font-weight: 400;
-
   /* Sets the font weight to 400 */
   line-height: 1.6;
-
   /* Sets the line-height to 1.6 * the font-size */
   color: #262626;
 }
@@ -91,7 +90,6 @@ img {
 a {
   color: rgba(122, 139, 123, 1);
   text-decoration: none;
-
   /* No underlining */
 }
 
@@ -104,7 +102,6 @@ a:hover,
 a:focus {
   color: rgba(198, 161, 160, 1);
   text-decoration: underline;
-
   /* Underlining when hovering over a link */
 }
 
@@ -115,17 +112,14 @@ a:active {
 
 .button {
   display: inline-block;
-
   /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
   background-color: #6a7a6b;
   color: #fff;
-
   /* needed to override the default link color */
   font-weight: 500;
   padding: 15px;
   border-radius: 5px;
   border-bottom: 1px solid #6a7a6b;
-
   /* width of the border, type, color */
   transition: 0.2s opacity;
   margin: 10px;
@@ -133,7 +127,6 @@ a:active {
 
 .button:hover {
   opacity: 0.8;
-
   /* Reduces the opacity of the button to 80% */
   text-decoration: none;
   color: #fff;
@@ -141,7 +134,6 @@ a:active {
 
 .button:active {
   opacity: 0.8;
-
   /* Reduces the opacity of the button to 80% */
   text-decoration: none;
 }
@@ -179,7 +171,6 @@ a.button {
 #my-work .row {
   margin: 0 0 25px;
   padding: 30px 0;
-
   /* 25px top and bottom, 0 left and right */
   border-bottom: 1px solid #4a4a4a;
 }
@@ -232,20 +223,20 @@ header {
   z-index: 10;
 }
 
-nav > ul {
+nav>ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
-nav > ul > li > a {
+nav>ul>li>a {
   padding: 0 25px;
   text-transform: lowercase;
   font-weight: 700;
   color: rgba(122, 139, 123, 1);
 }
 
-nav > ul > li > a:hover {
+nav>ul>li>a:hover {
   text-decoration: none;
 }
 
@@ -414,6 +405,10 @@ footer ul li a {
   font-weight: 600;
 }
 
+.top-bottom-margin-m {
+  margin: 40px 0;
+}
+
 /* QuickCare */
 #project-title h1 {
   font-size: 3em;
@@ -507,12 +502,12 @@ footer ul li a {
   margin: 10px 0;
 }
 
-#project-body ol {
+.ol {
   padding-left: 25px;
   margin-bottom: 25px;
 }
 
-#project-body ol li {
+.ol li {
   margin-bottom: 5px;
 }
 
@@ -530,25 +525,36 @@ footer ul li a {
 }
 
 .feature ol {
-  padding-left: 25px;
-  margin-bottom: 15px;
+  margin: 18px;
 }
 
 .feature ol li {
   line-height: 1.4;
-  margin-bottom: 7px;
   font-size: 0.9em;
+}
+
+.feature ol li:first-child {
+  margin-bottom: 10px;
 }
 
 .feature-list {
   display: inline-block;
   width: 100%;
-  background-color: rgb(106, 122, 107, 0.65);
-  color: #fff;
+  border-left-style: solid;
+  border-width: 4px;
+  border-left-color: rgb(106, 122, 107, 1);
+  color: #000;
   text-align: left;
-  border-radius: 10px;
-  padding: 10px 20px;
-  margin: 20px 0;
+  padding: 10px 0;
+  margin: 30px;
+}
+
+.hidden-m {
+  display: none;
+}
+
+#reveal .hidden-lg {
+  display: inline-block;
 }
 
 .bold-paragraph p {
@@ -570,6 +576,20 @@ footer ul li a {
   color: #cbb16f;
   margin: 0;
   font-weight: 800;
+}
+
+.break-section {
+  display: inline-block;
+  width: 100%;
+  background-color: #182a0f;
+  color: #fff;
+  text-align: left;
+}
+
+.break-section {
+  margin-top: 40px;
+  width: 100%;
+  height: 40px;
 }
 
 .conclusion {
@@ -604,6 +624,105 @@ footer ul li a {
   transition-property: background-color, color, border;
 }
 
+/* Project image modal */
+/* Style the Image Used to Trigger the Modal */
+.img-pop {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.img-pop:hover {
+  opacity: 0.7;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 80px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+  margin: auto;
+  margin-top: 110px;
+  display: block;
+  width: 100%;
+  max-width: 900px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content,
+#caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 130px;
+  right: 15px;
+  color: #f1f1f1;
+  font-size: 30px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) {
+  .modal-content {
+    width: 100%;
+  }
+}
+
 /* ==============================
 Medium devices (640px and larger)
 ================================= */
@@ -619,7 +738,7 @@ Medium devices (640px and larger)
     margin-top: 10px;
   }
 
-  nav > ul > li {
+  nav>ul>li {
     display: inline-block;
   }
 
@@ -767,6 +886,10 @@ Large devices (1024px or larger)
     text-align: left;
   }
 
+  .center-lg {
+    text-align: center;
+  }
+
   .solo-image-2 {
     width: 65%;
     margin: 60px auto;
@@ -785,8 +908,15 @@ Large devices (1024px or larger)
   }
 
   .feature-list {
+    display: inline-block;
     width: 100%;
-    padding: 20px;
+    border-left-style: solid;
+    border-width: 4px;
+    border-left-color: rgb(106, 122, 107, 1);
+    color: #000;
+    text-align: left;
+    padding: 0;
+    margin: 0;
     margin-top: 155px;
   }
 
@@ -824,6 +954,12 @@ Large devices (1024px or larger)
     padding-right: 500px;
   }
 
+  .break-section {
+    margin-top: 40px;
+    width: 100%;
+    height: 100px;
+  }
+
   .project-subsection p {
     padding-right: 500px;
     margin-bottom: 60px;
@@ -837,8 +973,16 @@ Large devices (1024px or larger)
     padding-right: 450px;
   }
 
+  .center-lg-padding {
+    padding: 0 225px;
+  }
+
   .top-margin {
     margin-top: 80px;
+  }
+
+  .left-margin {
+    margin-left: 100px;
   }
 
   .col-lg-7 {
@@ -874,14 +1018,41 @@ Large devices (1024px or larger)
     padding-top: 7px;
     padding-right: 10px;
   }
+
+  .hidden-m {
+    display: inline-block;
+  }
+
+  .hidden-lg {
+    display: none;
+  }
+
+  /* Image Modal */
+  /* Modal Content (Image) */
+  .modal-content {
+    margin: auto;
+    margin-top: 70px;
+    display: block;
+    width: 100%;
+    max-width: 900px;
+  }
+
+  /* Close Icon */
+  .close {
+    position: fixed;
+    top: 130px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
 }
 
 /* ==============================
 X-large devices (1440px or larger)
 ================================= */
-
 /* @media only screen and (min-width: 1440px) {} */
-
 /* CSS Animation */
 @keyframes color-change {
   0% {
