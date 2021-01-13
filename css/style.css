@@ -12,6 +12,7 @@ dark green-rgba { color: rgba(24, 42, 15, 1); }
 pale-yellow-rgba { color: rgba(203, 177, 111, 1); }
 pink-rgba { color: rgba(198, 161, 160, 1); }
 */
+
 /* Color Theme Neutral Swatches in Hex
 light grey { color: #F2F2F2; }
 light-med grey { color: #D9D9D9; }
@@ -26,6 +27,7 @@ medium grey { color: rgba(115, 115, 115, 1); }
 dark grey { color: rgba(38, 38, 38, 1); }
 almost black { color: rgba(13, 13, 13, 1); }
  */
+
 /* sets default width of all elements to include the padding and border */
 * {
   box-sizing: border-box;
@@ -40,10 +42,13 @@ body {
   background-color: #fff;
   font-family: 'Nanum Gothic', sans-serif;
   font-size: 16px;
+
   /* Sets the font size to 16px */
   font-weight: 400;
+
   /* Sets the font weight to 400 */
   line-height: 1.6;
+
   /* Sets the line-height to 1.6 * the font-size */
   color: #262626;
 }
@@ -90,6 +95,7 @@ img {
 a {
   color: rgba(122, 139, 123, 1);
   text-decoration: none;
+
   /* No underlining */
 }
 
@@ -102,6 +108,7 @@ a:hover,
 a:focus {
   color: rgba(198, 161, 160, 1);
   text-decoration: underline;
+
   /* Underlining when hovering over a link */
 }
 
@@ -112,14 +119,17 @@ a:active {
 
 .button {
   display: inline-block;
+
   /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
   background-color: #6a7a6b;
   color: #fff;
+
   /* needed to override the default link color */
   font-weight: 500;
   padding: 15px;
   border-radius: 5px;
   border-bottom: 1px solid #6a7a6b;
+
   /* width of the border, type, color */
   transition: 0.2s opacity;
   margin: 10px;
@@ -127,6 +137,7 @@ a:active {
 
 .button:hover {
   opacity: 0.8;
+
   /* Reduces the opacity of the button to 80% */
   text-decoration: none;
   color: #fff;
@@ -134,6 +145,7 @@ a:active {
 
 .button:active {
   opacity: 0.8;
+
   /* Reduces the opacity of the button to 80% */
   text-decoration: none;
 }
@@ -171,6 +183,7 @@ a.button {
 #my-work .row {
   margin: 0 0 25px;
   padding: 30px 0;
+
   /* 25px top and bottom, 0 left and right */
   border-bottom: 1px solid #4a4a4a;
 }
@@ -223,20 +236,20 @@ header {
   z-index: 10;
 }
 
-nav>ul {
+nav > ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
-nav>ul>li>a {
+nav > ul > li > a {
   padding: 0 25px;
   text-transform: lowercase;
   font-weight: 700;
   color: rgba(122, 139, 123, 1);
 }
 
-nav>ul>li>a:hover {
+nav > ul > li > a:hover {
   text-decoration: none;
 }
 
@@ -625,6 +638,7 @@ footer ul li a {
 }
 
 /* Project image modal */
+
 /* Style the Image Used to Trigger the Modal */
 .img-pop {
   border-radius: 5px;
@@ -639,24 +653,33 @@ footer ul li a {
 /* The Modal (background) */
 .modal {
   display: none;
+
   /* Hidden by default */
   position: fixed;
+
   /* Stay in place */
   z-index: 1;
+
   /* Sit on top */
   padding-top: 80px;
+
   /* Location of the box */
   left: 0;
   top: 0;
   width: 100%;
+
   /* Full width */
   height: 100%;
+
   /* Full height */
   overflow: auto;
+
   /* Enable scroll if needed */
   background-color: rgb(0, 0, 0);
+
   /* Fallback color */
   background-color: rgba(0, 0, 0, 0.9);
+
   /* Black w/ opacity */
 }
 
@@ -738,7 +761,7 @@ Medium devices (640px and larger)
     margin-top: 10px;
   }
 
-  nav>ul>li {
+  nav > ul > li {
     display: inline-block;
   }
 
@@ -1028,6 +1051,7 @@ Large devices (1024px or larger)
   }
 
   /* Image Modal */
+
   /* Modal Content (Image) */
   .modal-content {
     margin: auto;
@@ -1052,7 +1076,9 @@ Large devices (1024px or larger)
 /* ==============================
 X-large devices (1440px or larger)
 ================================= */
+
 /* @media only screen and (min-width: 1440px) {} */
+
 /* CSS Animation */
 @keyframes color-change {
   0% {

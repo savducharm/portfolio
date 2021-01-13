@@ -1,6 +1,6 @@
 console.log('Hi there! Welcome to my protfolio :)')
 
-function menuToggle() {
+function menuToggle () {
   var x = document.getElementById('myNavtoggle')
   if (x.className === 'navtoggle') {
     x.className += ' responsive'
@@ -18,7 +18,7 @@ var images = document.querySelectorAll('.img-pop')
 var modalImg = document.getElementById('img01')
 var captionText = document.getElementById('caption')
 for (let i = 0; i < images.length; i++) {
-  images[i].onclick = function() {
+  images[i].onclick = function () {
     modal.style.display = 'block'
     modalImg.src = this.src
     captionText.innerHTML = this.alt
