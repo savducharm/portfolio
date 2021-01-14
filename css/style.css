@@ -856,6 +856,10 @@ Medium devices (640px and larger)
   .center {
     text-align: center;
   }
+
+  .center-md-padding {
+    padding: 0 120px;
+  }
 }
 
 /* ==============================
@@ -869,6 +873,10 @@ Large devices (1024px or larger)
   .logo:hover {
     max-width: 140px;
     fill: #c6a1a0;
+  }
+
+  .center-md-padding {
+    padding: 0;
   }
 
   body {
