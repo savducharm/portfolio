@@ -473,6 +473,14 @@ footer ul li a {
   padding: 3px;
 }
 
+.wireframe-2 img {
+  display: block;
+  max-width: 33%;
+  float: left;
+  margin-bottom: 60px;
+  padding: 3px;
+}
+
 .solo-image img {
   display: block;
   margin: 20px 0;
@@ -551,6 +559,16 @@ footer ul li a {
   margin-bottom: 10px;
 }
 
+.feature {
+  line-height: 1.4;
+  font-size: 0.9em;
+}
+
+.feature ul li {
+  line-height: 1.4;
+  font-size: 0.9em;
+}
+
 .feature-list {
   display: inline-block;
   width: 100%;
@@ -561,6 +579,17 @@ footer ul li a {
   text-align: left;
   padding: 0;
   margin: 20px;
+}
+
+.feature-list-2 {
+  display: inline-block;
+  width: 100%;
+  border-left-style: solid;
+  border-width: 4px;
+  border-left-color: rgb(106, 122, 107, 1);
+  color: #000;
+  text-align: left;
+  padding-left: 20px;
 }
 
 .hidden-m {
@@ -806,6 +835,10 @@ Medium devices (640px and larger)
     width: 50%;
   }
 
+  .col-md-5 {
+    width: 40%;
+  }
+
   .col-md-4 {
     width: 33.3333%;
   }
@@ -813,6 +846,18 @@ Medium devices (640px and larger)
   [class*="col-"] {
     float: left;
     padding: 0 10px;
+  }
+
+  .project-section {
+    background: #f2f2f2;
+    border-radius: 10px;
+    padding: 20px 25px;
+    margin: 50px 0;
+  }
+
+  .project-section ul {
+    padding-left: 25px;
+    margin-bottom: 15px;
   }
 
   .row::after {
@@ -961,6 +1006,18 @@ Large devices (1024px or larger)
     margin-top: 175px;
   }
 
+  .feature-list-2 {
+    display: inline-block;
+    width: 100%;
+    border-left-style: solid;
+    border-width: 4px;
+    border-left-color: rgb(106, 122, 107, 1);
+    color: #000;
+    text-align: left;
+    padding-left: 20px;
+
+  }
+
   .feature {
     margin-top: 80px;
   }
@@ -1026,8 +1083,16 @@ Large devices (1024px or larger)
     margin-top: 80px;
   }
 
+  .top-margin-3 {
+    margin-top: 150px;
+  }
+
   .left-margin {
     margin-left: 100px;
+  }
+
+  .left-margin-2 {
+    margin-left: 50px;
   }
 
   .col-lg-7 {
