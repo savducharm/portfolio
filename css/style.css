@@ -423,6 +423,12 @@ footer ul li a {
   margin: 40px 0;
 }
 
+.border {
+  border-width: 0.25px;
+  border-color: black;
+  border: solid;
+}
+
 /* QuickCare */
 #project-title h1 {
   font-size: 3em;
@@ -1030,6 +1036,12 @@ Large devices (1024px or larger)
     width: 100%;
     height: 624px;
     background-color: #3845a7;
+  }
+
+  #portfolio .project-hero {
+    width: 100%;
+    height: 624px;
+    background-color: #C6A1A0;
   }
 
   #project-body h3 {
