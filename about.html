@@ -14,7 +14,7 @@
   <script src="https://kit.fontawesome.com/4de4e9216c.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body id="about-page">
   <header id="navigation-bar">
     <div class="container">
       <div class="navtoggle" id="myNavtoggle">
@@ -40,59 +40,62 @@
     </div>
   </header>
 
-  <main class="container">
-    <div id="about">
-      <div>
-        <h1>About</h1>
-      </div>
+  <main id="about">
+    <div class="container">
       <div class="row">
-        <div class="col-lg-6 center">
+        <div class="col-md-5 col-lg-4">
           <picture>
             <source srcset="img/about-image-1x.jpg" media="(max-width:767px)">
-            <img class="about-image" src="img/about-image-2x.jpg" alt="Savanna Ducharm holding bouquet.">
+            <img src="img/about-image-2x.jpg" alt="Savanna Ducharm holding bouquet.">
+          </picture>
+          <picture>
+            <source srcset="img/about-image-2.jpg" media="(max-width:767px)">
+            <img src="img/about-image-2@2x.jpg" alt="Savanna Ducharm holding bouquet.">
           </picture>
         </div>
-        <div id="my-story" class="col-lg-6 center-md-padding">
-          <h2>My Story</h2>
+        <div id="my-story" class="col-lg-7 col-md-7 left-padding">
+          <div class="quote center">
+            <h2>"I never set out to become anything in particular. Only to live creatively and push the scope of my experience through adventure and through passion."</h2>
+          </div>
           <p>I am a UX/UI designer based in San Clemente, CA. Born and raised in Southern California, I developed my love for people, culture, and art at a young age as I bounced between art galleries in Laguna Beach dragging my eccentric
             grandmother in toe.
           </p>
-          <p>Driven by an authentic, albeit cliché, calling to help people I found myself graduating UCSD with a degree in Sociocultural Anthropology and another in Global Health. Shortly thereafter I began working for an international nonprofit as
-            a graphic and web designer where I was able to use my creativity for good. During my time there, I began to learn about and implement a human-centered approach in my work which sparked my interest for UX.
+          <p>Driven by an authentic, albeit cliché, calling to help people I found myself graduating UCSD with a degree in Sociocultural Anthropology and another in Global Health. Shortly thereafter, I began working for an international nonprofit as
+            a visual and web designer where I was able to use my creativity for good.</p>
+            <p> During my time there, I started to learn about and implement a human-centered approach in my work which sparked my interest in UX. I took on the role of a project manager for a pilot refugee educational program in one of the world's largest refugee camps in Uganda. While working on this project, I began to see the benefits of design thinking and how design can be more than color palettes and fonts types. Design and research can be used to solve incredibly nuanced and complicated problems.
           </p>
           <p>I am now moving into UX/UI design as it is the perfect way for me to integrate my passion for design with my compassion for people.
           </p>
           <div class="center-button">
-          <a href=pdf/sav-ducharm-resume.pdf target="_blank" class="button">See my resume</a>
-        </div>
+            <a href=pdf/sav-ducharm-resume.pdf target="_blank" class="button">See Resume</a>
+          </div>
         </div>
       </div>
     </div>
 
 
-    <div id="skills-and-tools" class="project-section">
-      <h2>Skills and Tools</h2>
-      <div class="row">
-        <div class="col-md-6 col-lg-5">
-          <h3>Relevant Skills</h3>
+    <div id="skills-and-tools">
+      <div class="row top-margin">
+        <div class="col-md-4 col-lg-4">
+          <h3>Skills</h3>
           <ul>
-            <li>Visual design</li>
-            <li>Branding design</li>
-            <li>Responsive design</li>
-            <li>Accessibility</li>
-            <li>User interviews</li>
+            <li>User research and interviews</li>
+            <li>Enthography</li>
+            <li>User flows</li>
+            <li>Information architecture</li>
             <li>Personas</li>
-            <li>Wireframing</li>
-            <li>Prototyping</li>
+            <li>Wireframing and prototyping</li>
             <li>Usability testing</li>
-            <li>Affinity mapping</li>
-            <li>Journey mapping</li>
-            <li>Ethnography</li>
+            <li>Web and graphic design</li>
+            <li>Branding and marketing design</li>
+            <li>Adobe Creative Suite</li>
+            <li>HTML5 and CSS</li>
+            <li>Empathy and listening!</li>
           </ul>
         </div>
 
-        <div class="col-md-6 col-lg-5 left-margin">
-          <h3>Tools I Use</h3>
+        <div class="col-md-4 col-lg-4">
+          <h3>Tools</h3>
           <ul>
             <li>Adobe XD</li>
             <li>Sketch</li>
@@ -106,13 +109,24 @@
             <li>GitHub</li>
           </ul>
         </div>
+
+        <div class="col-md-4 col-lg-4">
+          <h3>Interests</h3>
+          <ul>
+            <li>Rock climbing</li>
+            <li>Making homemade pasta</li>
+            <li>Folding into shapes, aka yoga</li>
+            <li>Mary Oliver poems</li>
+            <li>Dungeon and Dragons</li>
+          </ul>
+        </div>
       </div>
     </div>
 
   </main>
 
   <footer id="contact">
-    <div class="container">
+    <div id="inner" class="container">
       <h2>Get in Touch</h2>
       <p>Have an opportunity you think I'd be a good fit for?</p>
       <div>
