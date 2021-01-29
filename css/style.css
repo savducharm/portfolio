@@ -434,7 +434,8 @@ footer ul li a {
 }
 
 #skills-and-tools .row {
-    margin: 0 15px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .quote h2 {
