@@ -49,3 +49,9 @@ function UnCryptMailto (s) {
 function linkTo_UnCryptMailto (s) {
   location.href = UnCryptMailto(s)
 }
+
+$('.round').click(function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    $('.arrow').toggleClass('bounceAlpha');
+});
